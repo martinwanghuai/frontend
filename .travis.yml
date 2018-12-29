@@ -7,4 +7,5 @@ before_install:
 
 script:
     - docker run martindockerlover/frontend npm run test -- --coverage
+
     
