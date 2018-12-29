@@ -1,0 +1,10 @@
+sudo:required
+services:
+    - docker
+
+before_install:
+    - docker build -t martindockerlover/frontend -f Dockerfile.dev .
+
+script:
+    - docker run martindockerlover/frontend npm run test -- --coverage
+    
